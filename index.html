@@ -34,7 +34,7 @@
                 </tr>
 
                 <tr>
-                    <td><p class="xonised" v-html="xoni"></p></td>
+                    <td><p class="xonised">{{ xoni }}</p></td>
                 </tr>
 
 
@@ -42,11 +42,11 @@
                 <tr>
                     <td>
                         <button style="border: none; background: none; padding: 0;"
-                            @click="handleClick"
+                            @click="xonizeText"
                             @mousedown="isClicked = true"
                             @mouseup="isClicked = false"
                             @mouseleave="isClicked = false">
-                            <img :class="{ clicked: isClicked }" width="200px" src="./button.svg" />
+                            <img :class="{ clicked: isClicked }" width="200vw" src="./button.svg" />
                         </button>
                     </td>
                 </tr>
@@ -57,7 +57,7 @@
 
     <footer>
         <p style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 8px; color: white; text-align: center;">
-        &copy; 2025 El cHoniZadOr by Olaya Álvarez Tuñón. Original idea by chevismo.com
+        &copy; 2025 El cHoniZadOr by <a href="https://github.com/olayasturias" style="color: #1019e5ff;">Olaya Álvarez Tuñón</a>. Original idea by chevismo.com and adapted from <a href="https://github.com/dalailomo" style="color: #1019e5ff;"></a>dalailomo</a>.
         </p>
     </footer>
     </body>

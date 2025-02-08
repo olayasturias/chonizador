@@ -3,16 +3,18 @@ var app = new Vue({
     data: () => {
         return {
             phrase: '',
+            xoni: '' // Store xonized text as a data property instead of computed
         }
     },
     created() {
         const s = sessionStorage.getItem('p');
-        this.phrase = s ? s : 'La mecánica cuántica es la rama de la física que estudia la naturaleza a escalas espaciales pequeñas, los sistemas atómicos y subatómicos y sus interacciones con la radiación electromagnética, en términos de cantidades observables';
+        this.phrase = s ? s : 'Hola caracola';
+        this.xoni = xoniza(this.phrase); // Initialize xoni when loading
     },
-    computed: {
-        xoni: function() {
-            sessionStorage.setItem('p', this.phrase);
-            return `${xoniza(this.phrase)}`;
+    methods: {
+        xonizeText() {
+            this.xoni = xoniza(this.phrase); // Apply xonization and update xoni
+            sessionStorage.setItem('p', this.phrase); // Store input phrase
         }
     }
 });

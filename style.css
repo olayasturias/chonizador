@@ -58,8 +58,9 @@ td {
 }
 
 .clicked {
-    transform: scale(0.9); /* Shrinks the button slightly */
-    transition: transform 0.1s ease-out;
+    filter: brightness(1.2) !important;/* Makes the button brighter */
+    transform: scale(0.5) !important; /* Shrinks slightly */
+    transition: transform 0.1s ease-out, filter 0.1s ease-out;
 }
 
 
