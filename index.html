@@ -45,8 +45,11 @@
                             @click="xonizeText"
                             @mousedown="isClicked = true"
                             @mouseup="isClicked = false"
-                            @mouseleave="isClicked = false">
-                            <img :class="{ clicked: isClicked }" width="200vw" src="./button.svg" />
+                            @mouseleave="isClicked = false"
+                            @touchstart="isClicked = true"
+                            @touchend="isClicked = false"
+                            :class="{ clicked: isClicked }">
+                            <img width="200px" src="./button.svg" />
                         </button>
                     </td>
                 </tr>
