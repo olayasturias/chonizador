@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat; /* No repeating */
     background-position: top left; /* Position in the top-left corner */
     /* background-blend-mode: screen; Blend with the background */
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif;
     background-color: #ff55f4ff;
     /* background: #ff55f4ff; */
     color: #a308a2ff;
