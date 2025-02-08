@@ -52,6 +52,9 @@ td {
     border: 5px solid #1019e5ff;
     border-radius: 5px;
     border-color: #1019e5ff;
+    overflow: auto;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .clicked {
