@@ -20,7 +20,7 @@ textarea {
     height: 50px;
     resize: none;
     padding: 14px;
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
     background: white;
@@ -45,7 +45,7 @@ td {
     padding: 14px;
     max-width: 80vw;
     max-height: 80px;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
     background: white;
     font-family: "Comic Sans MS", cursive, sans-serif;
