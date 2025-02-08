@@ -71,7 +71,7 @@ button {
 
 button img {
     display: block; /* Removes extra space around the image */
-    width: 30vw; /* Scales dynamically */
+    width: 50vw; /* Scales dynamically */
     min-width: 200px;
 }
 
