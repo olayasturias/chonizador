@@ -64,9 +64,10 @@ td {
 }
 
 button {
-    background: transparent !important; /* Fully transparent background */
-    border: none; /* Remove any border */
-    padding: 0;
+    background: none !important; /* Ensures no background */
+    border: none !important; /* Removes border */
+    box-shadow: none !important; /* Removes any default shadows */
+    padding: 0 !important;
 }
 
 button img {
