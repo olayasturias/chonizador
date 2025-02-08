@@ -11,25 +11,52 @@
             <table>
                 <tr>
                     <td>
-                        <img height="150px" src="./ie.gif" />
-                        <img height="180px" src="./welcome-to-my-site.gif" />
-                        <img height="150px" src="./ie.gif" />
+                        <p style="font-family: 'Comic Sans MS', bold, sans-serif; font-size: 24px;">-*! El cHoniZadOr *!*</p>
                     </td>
                 </tr>
+
                 <tr>
-                    <td><p class="xonised" v-html="xoni"></p></td>
+                    <td>
+                        <p style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 8px; color: white;">Traductor Castellano->Choni</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 8px; color: white;">Escribe algo normal en castellano, para traducirlo a idioma choni</p>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><textarea v-model="phrase"></textarea></td>
                 </tr>
 
-                <tr><td>
-                    <img width="400px" src="./uc.gif" />
-                </td></tr>
+                <tr>
+                    <td><p class="xonised" v-html="xoni"></p></td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <button style="border: none; background: none; padding: 0;"
+                            @click="handleClick"
+                            @mousedown="isClicked = true"
+                            @mouseup="isClicked = false"
+                            @mouseleave="isClicked = false">
+                            <img :class="{ clicked: isClicked }" width="200px" src="./button.svg" />
+                        </button>
+                    </td>
+                </tr>
             </table>
         </div>
 
         <script src="./app.js"></script>
+
+    <footer>
+        <p style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 8px; color: white; text-align: center;">
+        &copy; 2025 El cHoniZadOr by Olaya Álvarez Tuñón. Original idea by chevismo.com
+        </p>
+    </footer>
     </body>
 </html>

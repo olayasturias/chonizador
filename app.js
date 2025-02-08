@@ -3,7 +3,6 @@ var app = new Vue({
     data: () => {
         return {
             phrase: '',
-            deco: '_.~"~._.~"~._.~"~._.~"~._'
         }
     },
     created() {
@@ -13,7 +12,7 @@ var app = new Vue({
     computed: {
         xoni: function() {
             sessionStorage.setItem('p', this.phrase);
-            return `${this.deco}<br /> ${xoniza(this.phrase)} <br />${this.deco}`;
+            return `${xoniza(this.phrase)}`;
         }
     }
 });
