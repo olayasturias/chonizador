@@ -13,19 +13,19 @@
             <table>
                 <tr>
                     <td>
-                        <p style="font-family: 'Comic Sans MS', bold, sans-serif; font-size: 30px;">-*! El cHoniZadOr *!*</p>
+                        <p :style="{ fontFamily: isAndroid ? '\'Comic Neue\', sans-serif' : '\'Comic Sans MS\', bold, sans-serif', fontWeight: isAndroid ? 'bold' : 'normal', fontSize: '30px' }">-*! El cHoniZadOr *!*</p>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 20px; color: white;">Traductor Castellano->Choni</p>
+                        <p :style="{ fontFamily: isAndroid ? '\'Comic Neue\', sans-serif' : '\'Comic Sans MS\', cursive, sans-serif', fontSize: '20px', color: 'white' }">Traductor Castellano->Choni</p>
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <p style="font-family: 'Comic Sans MS', cursive, sans-serif; font-size: 20px; color: white;">Escribe algo normal en castellano, para traducirlo a idioma choni</p>
+                        <p :style="{ fontFamily: isAndroid ? '\'Comic Neue\', sans-serif' : '\'Comic Sans MS\', cursive, sans-serif', fontSize: '20px', color: 'white' }">Escribe algo normal en castellano, para traducirlo a idioma choni</p>
                     </td>
                 </tr>
 
