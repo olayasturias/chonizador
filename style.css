@@ -63,6 +63,17 @@ td {
     transition: transform 0.1s ease-out, filter 0.1s ease-out;
 }
 
+button {
+    background: transparent !important; /* Fully transparent background */
+    border: none; /* Remove any border */
+    padding: 0;
+}
+
+button img {
+    display: block; /* Removes extra space around the image */
+    width: 30vw; /* Scales dynamically */
+    min-width: 200px;
+}
 
 @media (max-width: 600px) {
     textarea, .xonised {

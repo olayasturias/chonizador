@@ -41,16 +41,17 @@
 
                 <tr>
                     <td>
-                        <button style="border: none; background: none; padding: 0;"
-                            @click="xonizeText"
-                            @mousedown="isClicked = true"
-                            @mouseup="isClicked = false"
-                            @mouseleave="isClicked = false"
-                            @touchstart="isClicked = true"
-                            @touchend="isClicked = false"
-                            :class="{ clicked: isClicked }">
-                            <img width="200px" src="./button.svg" />
-                        </button>
+                        <div class="button-container">
+                            <button @click="xonizeText"
+                                @mousedown="isClicked = true"
+                                @mouseup="isClicked = false"
+                                @mouseleave="isClicked = false"
+                                @touchstart="isClicked = true"
+                                @touchend="isClicked = false"
+                                :class="{ clicked: isClicked }">
+                                <img src="./button.svg" />
+                            </button>
+                        </div>
                     </td>
                 </tr>
             </table>
