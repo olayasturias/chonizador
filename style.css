@@ -108,26 +108,40 @@ body, textarea, .xonised {
 
 /* Right column (fake Ad space) */
 .ad-column {
-    width: 12vw; /* Fixed width for the ad column */
-    height: 80vh; /* Full height */
-    /* background-color: #a308a2ff; Light pink background */
+    width: 100vw; /* ✅ Full width for mobile */
+    max-width: 350px; /* ✅ Limit max size on larger screens */
+    height: auto; /* ✅ Allow height to adjust */
     display: flex;
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    /* border-left: 5px solid #ff00ff; Optional border */
     padding: 10px;
     overflow: hidden; /* Prevents unwanted scrolling */
 }
 
-/* Ensure the image is visible */
+/* Ensure images are properly scaled */
 .ad-column img {
-    display: block !important; /* Ensure it's rendered */
-    width: 100% !important; /* Force it to take space */
+    display: block !important; /* Ensure visibility */
+    width: 100% !important; /* Scale to column width */
     height: auto !important; /* Maintain aspect ratio */
     max-width: 100% !important;
-    max-height: 100% !important;
+    max-height: none !important; /* ✅ Remove height restriction */
 }
+
+/* ✅ Mobile-friendly styles */
+@media (max-width: 600px) {
+    .ad-column {
+        width: 100%; /* ✅ Use entire width on small screens */
+        max-width: 100%; /* ✅ Remove restrictions */
+        height: auto; /* ✅ Allow height to adjust dynamically */
+    }
+    .ad-column img {
+        width: 90%; /* ✅ Ensures images take most of the screen */
+        max-width: 100%; /* ✅ Allows full scaling */
+        height: auto; /* ✅ Maintain aspect ratio */
+    }
+}
+
 
 footer {
     width: 100%;
