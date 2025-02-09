@@ -21,7 +21,9 @@
 
     </head>
 
-    <body>        
+    <body>
+        <div class="container">
+            <!-- Main content -->        
         <div id="app">
             <table>
                 <tr>
@@ -69,6 +71,12 @@
                 </tr>
             </table>
         </div>
+
+        <!-- Right ad column -->
+        <div class="ad-column">
+            <img v-bind:src="randomAd" alt="Publicidad Vintage" />
+        </div>
+    </div>
 
         <script src="./app.js"></script>
 

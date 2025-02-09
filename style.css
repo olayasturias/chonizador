@@ -10,9 +10,20 @@ body {
     color: #a308a2ff;
 }
 
+.container {
+    display: flex; /* Ensures horizontal layout */
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+}
+
+
 #app {
+    flex: 1; /* Expands to take available space */
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 80vw;
 }
 
 textarea {
@@ -93,4 +104,28 @@ img {
 
 body, textarea, .xonised {
     font-family: "Comic Neue", "Comic Sans MS", cursive, sans-serif !important;
+}
+
+/* Right column (fake Ad space) */
+.ad-column {
+    width: 12vw; /* Fixed width for the ad column */
+    height: 80vh; /* Full height */
+    background-color: #ffccff; /* Light pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 5px solid #ff00ff; /* Optional border */
+    padding: 10px;
+    overflow: hidden; /* Prevents unwanted scrolling */
+}
+
+/* Ensure the image is visible */
+.ad-column img {
+    display: block !important; /* Ensure it's rendered */
+    width: 100% !important; /* Force it to take space */
+    height: auto !important; /* Maintain aspect ratio */
+    max-width: 100% !important;
+    max-height: 100% !important;
+    border: 5px solid red !important; /* Debugging: See if the image is actually there */
+    background-color: white !important; /* Debugging: Check if it's loading */
 }
