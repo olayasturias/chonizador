@@ -74,9 +74,32 @@
 
         <!-- Right ad column -->
         <div class="ad-column">
-            <img v-bind:src="randomAd" alt="Publicidad Vintage" />
+            <img v-bind:src="computedImageSrc" alt="Publicidad Vintage" @load="logImage" @error="logImageError" />
         </div>
-    </div>
+
+        <script>
+            new Vue({
+                el: '.ad-column',
+                data() {
+                    return {
+                        computedImageSrc: '',
+                    };
+                },
+                created() {
+                    // Ensure the file path matches the manually working one EXACTLY
+                    this.computedImageSrc = './spam/ad' + (Math.floor(Math.random() * 5) + 1) + '.jpg';
+                    console.log("🖼️ Selected ad image:", this.computedImageSrc);
+                },
+                methods: {
+                    logImage(event) {
+                        console.log("✅ Image loaded:", event.target.src);
+                    },
+                    logImageError(event) {
+                        console.error("❌ Image failed to load:", event.target.src);
+                    }
+                }
+            });
+        </script>
 
         <script src="./app.js"></script>
 
