@@ -1,3 +1,4 @@
+// https://chevismo.wordpress.com/2010/08/30/el-chonizador/
 // Musical Symbols
 const musicEmojis = ['♪', '♬', '♩', '𝄞'];
 
