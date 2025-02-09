@@ -23,11 +23,11 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    max-width: 80vw;
+    max-width: 70vw;
 }
 
 textarea {
-    max-width: 80vw; /* Ensures it doesn't grow too wide */
+    max-width: 70vw; /* Ensures it doesn't grow too wide */
     height: 50px;
     resize: none;
     padding: 14px;
@@ -42,7 +42,7 @@ textarea {
 }
 
 table, th, td {
-    max-width: 90vw;
+    max-width: 80vw;
 }
 
 
@@ -54,7 +54,7 @@ td {
 .xonised {
     text-align: center;
     padding: 14px;
-    max-width: 80vw;
+    max-width: 70vw;
     max-height: 80px;
     font-size: 22px;
     font-weight: bold;
@@ -129,10 +129,13 @@ body, textarea, .xonised {
 }
 
 /* ✅ Mobile-friendly styles */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+    #app {
+        max-width: 70vw; /* Narrow the app container on mobile */
+    }
     .ad-column {
         width: 100%; /* ✅ Use entire width on small screens */
-        max-width: 100%; /* ✅ Remove restrictions */
+        max-width: 30vw; /* ✅ Remove restrictions */
         height: auto; /* ✅ Allow height to adjust dynamically */
     }
     .ad-column img {
@@ -140,6 +143,7 @@ body, textarea, .xonised {
         max-width: 100%; /* ✅ Allows full scaling */
         height: auto; /* ✅ Maintain aspect ratio */
     }
+
 }
 
 
