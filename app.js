@@ -7,7 +7,7 @@ var app = new Vue({
     }),
     created() {
         const s = sessionStorage.getItem('p');
-        this.phrase = s ? s : 'La mecánica cuántica es la rama de la física que estudia la naturaleza a escalas espaciales pequeñas, los sistemas atómicos y subatómicos y sus interacciones con la radiación electromagnética, en términos de cantidades observables';
+        this.phrase = s ? s : 'Hola mundo! Te trae aqui la arqueologia o la nostalgia millenial?';
         this.xoni = xoniza(this.phrase);
     },
     methods: {
